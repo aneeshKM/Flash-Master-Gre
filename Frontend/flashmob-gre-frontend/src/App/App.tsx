@@ -1,12 +1,16 @@
 import React from 'react';
-// import ProgramTable from './components/ProgramTable';
+import { Container, Row, Col } from 'react-bootstrap';
+import FlashSet from '../FlashSet/FlashSet';
 
 const App: React.FC = () => {
   return (
-    <div>
-      {/* <h1>Flash Card Sets</h1> */}
-      {/* <ProgramTable /> */}
-    </div>
+    <Container fluid>
+      <Row>
+        <Col>
+          <FlashSet/>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
