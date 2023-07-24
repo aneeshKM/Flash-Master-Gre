@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Row, Col } from "react-bootstrap";
+import { Card, Row, Col, Container } from "react-bootstrap";
 import "./FlashSet.css";
 
 const FlashSet: React.FC = () =>{
@@ -13,7 +13,7 @@ const FlashSet: React.FC = () =>{
     ];
 
     return(
-        <>
+        <Container fluid>
             <Row>
                 <h1 className="custom-h1">Practice Sets</h1>
             </Row>
@@ -28,8 +28,9 @@ const FlashSet: React.FC = () =>{
                         </Card>
                     </Col>
             </Row>
+                
             ))}
-        </>
+        </Container>
     );
 
 };
