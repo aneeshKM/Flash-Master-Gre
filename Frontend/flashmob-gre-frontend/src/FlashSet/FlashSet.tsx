@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Row, Col, Container } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import "./FlashSet.css";
 
 const FlashSet: React.FC = () =>{
@@ -12,6 +13,11 @@ const FlashSet: React.FC = () =>{
         {id: 5, name:"Set 4",words:30},
     ];
 
+    const navigate = useNavigate();
+    const nextPage = () =>{
+        navigate("/set");
+    }
+
     return(
         <Container fluid>
             <Row>
@@ -20,7 +26,7 @@ const FlashSet: React.FC = () =>{
             {dataset.map((data) =>(
                 <Row key={data.id} className="mb-3">
                     <Col>
-                        <Card>
+                        <Card onClick={nextPage}>
                             <Card.Body className="custom-card">
                                 <Card.Title>{data.name}</Card.Title>
                                 <Card.Text>Total number of practice words are {data.words}</Card.Text>

@@ -1,10 +1,4 @@
 /* FlashCardsPage.css */
-.flashcards-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
   
   .carousel-container {
     max-width: 600px;
@@ -28,11 +22,11 @@
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 20px;
-    max-width: 400px;
+    /* max-width: 400px; */
   }
   
   .flashcard h2 {
-    color: #007bff; /* Blue color for question and answer headings */
+    color: #007bff; 
   }
 
 .carousel-control-prev-icon,
@@ -46,4 +40,40 @@
 .carousel-control-next-icon:hover {
   background-color: darkgreen; /* Change the color on hover if desired */
 }
+
+.carousel-control-prev{
+    justify-content: left;
+}
+.carousel-control-next{
+    justify-content: right;
+}
+
+/* FlashCardsPage.css */
+
+/* ... (Previous CSS code) ... */
+
+.flashcard {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    /* max-width: 400px; */
+  }
   
+  .flashcard .card-title {
+    color: #007bff; /* Blue color for question and answer headings */
+  }
+  
+  .wordCard {
+    aspect-ratio: 1/1; /* Maintain a square aspect ratio for the cards */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+  }
