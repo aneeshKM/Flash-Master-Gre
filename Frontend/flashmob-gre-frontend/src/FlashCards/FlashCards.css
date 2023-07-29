@@ -1,0 +1,79 @@
+/* FlashCardsPage.css */
+  
+  .carousel-container {
+    max-width: 600px;
+    margin-bottom: 30px;
+  }
+  
+  .carousel-container .carousel {
+    display: flex; /* Set the carousel to use flexbox */
+    flex-wrap: nowrap; /* Prevent carousel items from wrapping to a new line */
+    overflow-x: auto; /* Enable horizontal scrolling for the carousel items */
+    scroll-snap-type: x mandatory; /* Enable snap scrolling for carousel items */
+  }
+  
+  .carousel-container .carousel .carousel-item {
+    scroll-snap-align: start; /* Snap the items to the start of the container */
+  }
+  
+  .flashcard {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    /* max-width: 400px; */
+  }
+  
+  .flashcard h2 {
+    color: #007bff; 
+  }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: green;
+  /* Add any additional styles to customize the arrows, e.g., border-radius, padding, etc. */
+}
+
+/* Styling for carousel arrows on hover */
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: darkgreen; /* Change the color on hover if desired */
+}
+
+.carousel-control-prev{
+    justify-content: left;
+}
+.carousel-control-next{
+    justify-content: right;
+}
+
+/* FlashCardsPage.css */
+
+/* ... (Previous CSS code) ... */
+
+.flashcard {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    /* max-width: 400px; */
+  }
+  
+  .flashcard .card-title {
+    color: #007bff; /* Blue color for question and answer headings */
+  }
+  
+  .wordCard {
+    aspect-ratio: 1/1; /* Maintain a square aspect ratio for the cards */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+  }
