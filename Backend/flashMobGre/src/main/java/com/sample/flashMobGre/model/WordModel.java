@@ -1,4 +1,4 @@
-package com.sample.flashMobGre.model;
+package com.sample.flashmobgre.model;
 
 import lombok.Data;
 
@@ -9,4 +9,5 @@ public class WordModel {
     private String marathiMeaning;
     private String englishMeaning;
     private String sampleSentence;
+
 }
