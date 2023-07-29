@@ -1,6 +1,6 @@
-package com.sample.flashMobGre.service;
+package com.sample.flashmobgre.service;
 
-import com.sample.flashMobGre.model.WordModel;
+import com.sample.flashmobgre.model.WordModel;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -15,15 +15,15 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 
 @Service
 public class ExcelToJsonService {
 
-    private AtomicInteger idGenerator = new AtomicInteger(1);
 
+    private int id = 1;
     public List<WordModel> readExcel(String filePath){
         List<WordModel> WordModelList = new ArrayList<>();
+
 
         try (InputStream inputStream = new FileInputStream(filePath);
              Workbook workbook = WorkbookFactory.create(inputStream)) {
@@ -37,7 +37,7 @@ public class ExcelToJsonService {
                 Row row = rowIterator.next();
                 WordModel WordModel = new WordModel();
 
-                WordModel.setId(idGenerator.getAndIncrement());
+                WordModel.setId(id++);
                 WordModel.setWord(row.getCell(0).getStringCellValue());
                 WordModel.setMarathiMeaning(row.getCell(1).getStringCellValue());
                 WordModel.setEnglishMeaning(row.getCell(2).getStringCellValue());
@@ -45,6 +45,7 @@ public class ExcelToJsonService {
 
                 WordModelList.add(WordModel);
             }
+            id = 1;
         } catch (Exception e) {
             // Handle exceptions
             e.printStackTrace();
