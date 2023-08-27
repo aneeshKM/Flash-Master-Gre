@@ -9,6 +9,10 @@ const App: React.FC = () => {
       <Routes>
           <Route path="/" element={<FlashSet/>} />
           <Route path="/set" element={<FlashCardsPage/>}/>
+          <Route path="/set1" element={<FlashCardsPage/>}/>
+          <Route path="/set2" element={<FlashCardsPage/>}/>
+          <Route path="/set3" element={<FlashCardsPage/>}/>
+          <Route path="/set4" element={<FlashCardsPage/>}/>
       </Routes>
     </BrowserRouter>
   );
